@@ -1,0 +1,45 @@
+<!doctype html><html class="" data-reactroot=""><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous"/>
+<meta data-react-helmet="true" charset="utf-8"/><meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"/><meta data-react-helmet="true" name="description" content="Use this template to create a Pagic site with the blog theme."/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/>
+<title data-react-helmet="true">戴尔笔记本E6430安装黑苹果的全部过程 · pagic template</title>
+<link data-react-helmet="true" rel="stylesheet" href="/assets/index.css"/><link data-react-helmet="true" id="prismTheme" rel="stylesheet" href="/assets/prism.css"/>
+<script data-react-helmet="true" >
+    const shouldSetIsDark = document.cookie.includes('is_dark=1') ? true : document.cookie.includes('is_dark=0') ? false : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (shouldSetIsDark) {
+      document.documentElement.classList.add('is_dark');
+      document.getElementById('prismTheme').href = "/assets/prism_tomorrow.css";
+    }
+  </script>
+</head><body><a class="czs-menu-l show_on_mobile aside_button_open" href="#" style="background-image:url(&quot;/assets/czs-menu-l.svg&quot;)"></a><a class="show_on_mobile aside_button_text" href="/">pagic template</a><aside class="hide_on_mobile"><div class="aside_card"><a class="czs-menu-l show_on_mobile aside_button_close" href="#" style="background-image:url(&quot;/assets/czs-close-l.svg&quot;)"></a><h1><a href="/">pagic template</a></h1><p class="description">Use this template to create a Pagic site with the blog theme.</p><ul class="social list_style_none"><li class="flex_center"><a class="czs-github-logo" href="https://github.com/waimao8/pagic_template" target="_blank" style="background-image:url(&quot;/assets/czs-github-logo.svg&quot;)"></a></li><li class="flex_center"><a class="czs-message-l" href="mailto:huqi@gpdi.com" target="_blank" style="background-image:url(&quot;/assets/czs-message-l.svg&quot;)"></a></li><li class="flex_center"><a class="czs-twitter" href="https://twitter.com/huqii" target="_blank" style="background-image:url(&quot;/assets/czs-twitter.svg&quot;)"></a></li><li class="flex_center"><a class="czs-v2ex" href="https://v2ex.com/member/huqi" target="_blank" style="background-image:url(&quot;/assets/czs-v2ex.svg&quot;)"></a></li><li class="flex_center"><a class="czs-zhihu" href="https://www.zhihu.com/people/fashaoge" target="_blank" style="background-image:url(&quot;/assets/czs-zhihu.svg&quot;)"></a></li><li style="flex-grow:1"></li><li class="toggle_dark flex_center"><span class="czs-sun" style="background-image:url(&quot;/assets/czs-sun.svg&quot;)"></span><span class="czs-sun-l" style="background-image:url(&quot;/assets/czs-sun-l.svg&quot;)"></span><span class="czs-moon" style="background-image:url(&quot;/assets/czs-moon.svg&quot;)"></span><span class="czs-moon-l" style="background-image:url(&quot;/assets/czs-moon-l.svg&quot;)"></span></li></ul><nav><ul class="menu list_style_none"><li><a class="flex_center" href="/index.html"><span class="czs-home-l" style="background-image:url(&quot;/assets/czs-home-l.svg&quot;)"></span>Homepage</a></li><li><a class="flex_center" href="/categories/index.html"><span class="czs-category-l" style="background-image:url(&quot;/assets/czs-category-l.svg&quot;)"></span>Categories</a></li><li><a class="flex_center" href="/tags/index.html"><span class="czs-tag-l" style="background-image:url(&quot;/assets/czs-tag-l.svg&quot;)"></span>Tags</a></li><li><a class="flex_center" href="/about/index.html"><span class="czs-about-l" style="background-image:url(&quot;/assets/czs-about-l.svg&quot;)"></span>About</a></li><li><a class="flex_center" href="/archives/index.html"><span class="czs-box-l" style="background-image:url(&quot;/assets/czs-box-l.svg&quot;)"></span>Archives</a></li><li><a class="flex_center" href="/links/index.html"><span class="czs-link-l" style="background-image:url(&quot;/assets/czs-link-l.svg&quot;)"></span>Friends</a></li></ul></nav></div></aside><section class="main"><h1>寻找EFI文件</h1><div class="main_post_meta"><time dateTime="Mon Dec 09 2019 03:21:42 GMT+0800 (CST)">2019-12-10</time> · <!-- -->unknown</div><article><p>从黑苹果长期维护机型 EFI 及安装教程整理
+<a href="https://www.jianshu.com/p/484f07b8c7fd">https://www.jianshu.com/p/484f07b8c7fd</a>
+找到  <a href="https://github.com/kinoute/Hack-Dell-Latitude-E6430">https://github.com/kinoute/Hack-Dell-Latitude-E6430</a> 下载EFI文件夹
+<!-- more --></p>
+<h1>下载系统</h1>
+<p>从黑果小兵下载macOS Mojave 10.14.6，自带Clover的
+<a href="https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html">https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html</a></p>
+<h1>制作启动U盘</h1>
+<p>下载etcher软件，<a href="https://www.balena.io/etcher">https://www.balena.io/etcher</a> 选择U盘，点击Flash即可。（10分钟左右）
+也可以用TransMac制作启动盘（比较麻烦），用管理员权限打开，在软件的左侧找到自己的U盘，然后右键 ，选择Formar Disk for Mac意思是将U盘格式化为Mac格式，然后右键选择Restore with Disk Image来将准备的dmg镜像写入到U盘中（要30分钟左右）</p>
+<h1>替换EFI文件</h1>
+<p>​    拔下U盘重新插上，会发现有一个EFI文件夹，将里面的文件删除，把下载好的适合自己机型的EFI文件复制进去就可以了，如果找不到EFI文件夹，可以用DiskGenius读取，并强制删除里面的EFI文件，Ctrl+V粘贴自己的EFI文件夹</p>
+<h1>设置bios</h1>
+<p>拥有正确的BIOS版本后，请使用F12启动时的密钥进入BIOS 。单击“加载默认值”，然后将SATAOperations设置为AHCI，将Boot List Option设置为UEFI并禁用Secure Boot</p>
+<h1>安装mac</h1>
+<p>参考 <a href="https://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html">https://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</a></p>
+<p>启动U盘插入电脑，开机按F12，选择USB启动安装程序，选择macOS Install、选择磁盘工具，点击左侧，切换到显示所有设备，然后找到我们要安装系统的硬盘，点击抹掉，名称随便写，格式选mac os扩展（日志式），方案选择GUID 分区图，点击抹掉。
+安装Mac OS ，提示:应用程序副本不能验证 它在下载过程中可能已遭破坏或篡改
+先关闭电脑的网络, 如关闭右上角的WIFI或者拔掉网线 然后在终端里面修改时间
+请完全复制下面代码，按回车键确认:
+date 122014102015.30
+输入上面的代码按回车后返回的是 Sun Dec 20 14:10:30 PST 2015
+其他就都简单了，都是中文的，第一次走完进度条后，会自动重启一次，整个安装过程大概20来分钟。
+安装完成后，每次启动都是要从U盘启动的，要想设置成从电脑启动。我们需要下面的操作。</p>
+<h1>将U盘内的EFI文件复制到电脑</h1>
+<p>查看磁盘分区表
+diskutil list
+挂载磁盘EFI分区
+sudo diskutil mount disk0s1
+挂载U盘EFI分区
+sudo diskutil mount disk2s1
+打开Finder，注意后面有个.
+open .
+电脑上会显示U盘和硬盘的EFI文件夹，将U盘的EFI文件复制到硬盘的EFI文件夹就可以拔掉U盘启动mac了</p></article></section><footer>Powered by <a href="https://github.com/xcatliu/pagic" target="_blank">Pagic</a></footer><script src="https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js"></script><script src="https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js"></script><script type="module" src="/index.js"></script></body></html>

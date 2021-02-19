@@ -1,0 +1,63 @@
+<!doctype html><html class="" data-reactroot=""><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous"/>
+<meta data-react-helmet="true" charset="utf-8"/><meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"/><meta data-react-helmet="true" name="description" content="Use this template to create a Pagic site with the blog theme."/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/>
+<title data-react-helmet="true">N1安装omv后安装docker+transmission+lnmp搭建网站 · pagic template</title>
+<link data-react-helmet="true" rel="stylesheet" href="/assets/index.css"/><link data-react-helmet="true" id="prismTheme" rel="stylesheet" href="/assets/prism.css"/>
+<script data-react-helmet="true" >
+    const shouldSetIsDark = document.cookie.includes('is_dark=1') ? true : document.cookie.includes('is_dark=0') ? false : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (shouldSetIsDark) {
+      document.documentElement.classList.add('is_dark');
+      document.getElementById('prismTheme').href = "/assets/prism_tomorrow.css";
+    }
+  </script>
+</head><body><a class="czs-menu-l show_on_mobile aside_button_open" href="#" style="background-image:url(&quot;/assets/czs-menu-l.svg&quot;)"></a><a class="show_on_mobile aside_button_text" href="/">pagic template</a><aside class="hide_on_mobile"><div class="aside_card"><a class="czs-menu-l show_on_mobile aside_button_close" href="#" style="background-image:url(&quot;/assets/czs-close-l.svg&quot;)"></a><h1><a href="/">pagic template</a></h1><p class="description">Use this template to create a Pagic site with the blog theme.</p><ul class="social list_style_none"><li class="flex_center"><a class="czs-github-logo" href="https://github.com/waimao8/pagic_template" target="_blank" style="background-image:url(&quot;/assets/czs-github-logo.svg&quot;)"></a></li><li class="flex_center"><a class="czs-message-l" href="mailto:huqi@gpdi.com" target="_blank" style="background-image:url(&quot;/assets/czs-message-l.svg&quot;)"></a></li><li class="flex_center"><a class="czs-twitter" href="https://twitter.com/huqii" target="_blank" style="background-image:url(&quot;/assets/czs-twitter.svg&quot;)"></a></li><li class="flex_center"><a class="czs-v2ex" href="https://v2ex.com/member/huqi" target="_blank" style="background-image:url(&quot;/assets/czs-v2ex.svg&quot;)"></a></li><li class="flex_center"><a class="czs-zhihu" href="https://www.zhihu.com/people/fashaoge" target="_blank" style="background-image:url(&quot;/assets/czs-zhihu.svg&quot;)"></a></li><li style="flex-grow:1"></li><li class="toggle_dark flex_center"><span class="czs-sun" style="background-image:url(&quot;/assets/czs-sun.svg&quot;)"></span><span class="czs-sun-l" style="background-image:url(&quot;/assets/czs-sun-l.svg&quot;)"></span><span class="czs-moon" style="background-image:url(&quot;/assets/czs-moon.svg&quot;)"></span><span class="czs-moon-l" style="background-image:url(&quot;/assets/czs-moon-l.svg&quot;)"></span></li></ul><nav><ul class="menu list_style_none"><li><a class="flex_center" href="/index.html"><span class="czs-home-l" style="background-image:url(&quot;/assets/czs-home-l.svg&quot;)"></span>Homepage</a></li><li><a class="flex_center" href="/categories/index.html"><span class="czs-category-l" style="background-image:url(&quot;/assets/czs-category-l.svg&quot;)"></span>Categories</a></li><li><a class="flex_center" href="/tags/index.html"><span class="czs-tag-l" style="background-image:url(&quot;/assets/czs-tag-l.svg&quot;)"></span>Tags</a></li><li><a class="flex_center" href="/about/index.html"><span class="czs-about-l" style="background-image:url(&quot;/assets/czs-about-l.svg&quot;)"></span>About</a></li><li><a class="flex_center" href="/archives/index.html"><span class="czs-box-l" style="background-image:url(&quot;/assets/czs-box-l.svg&quot;)"></span>Archives</a></li><li><a class="flex_center" href="/links/index.html"><span class="czs-link-l" style="background-image:url(&quot;/assets/czs-link-l.svg&quot;)"></span>Friends</a></li></ul></nav></div></aside><section class="main"><div class="main_post_meta"><time dateTime="Mon Dec 09 2019 02:31:42 GMT+0800 (CST)">2019-12-10</time> · <!-- -->unknown</div><article><p>N1安装好omv后，
+进入系统，常规设置，修改web管理员密码，需要安装的lnmp搭建网站的话，还需要修改端口，自动登出时间可以设置为1天。
+进入磁盘，文件管理，挂着ext4格式的U盘或者硬盘（其他格式的不能修改权限比如777 755等）</p>
+<!-- more -->
+<p>进入共享文件夹，设置共享，设置ftp nfs smb 等
+进入omv-extars，打开docker ce
+进入插件安装transmissionbt ，webdav docker
+启动容器，设置路径数据盘，避免8G内存不够用</p>
+<p>安装transmission-web 看官方的教程</p>
+<p><a href="https://github.com/ronggang/transmission-web-control/wiki/Linux-Installation-CN">https://github.com/ronggang/transmission-web-control/wiki/Linux-Installation-CN</a></p>
+<p>安装最新发布版本</p>
+<!-- more -->
+<p>docker安装portainer</p>
+<blockquote>
+<p>docker run -d -p 9888:9000 <br>
+--restart=always <br>
+-v /var/run/docker.sock:/var/run/docker.sock <br>
+--name prtainer-test <br>
+<a href="http://docker.io/portainer/portainer">docker.io/portainer/portainer</a></p>
+</blockquote>
+<p>docker run -d -p 9888:9000 --restart=always --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v /Users/lee/dev/docker_file/portainer/data:/data <a href="http://docker.io/portainer/portainer">docker.io/portainer/portainer</a>
+安装lnmp（我试过通过docker安装deibian后安装lnmp和宝塔，omv是改过端口的，安装后omv还是打不开，所以我选择直接安装）
+宝塔会占内存，经常安装出错，所以我选择安装lnmp无人值守安装
+<a href="https://lnmp.org/auto.html">https://lnmp.org/auto.html</a> 选择版本
+无人值守安装命令：
+wget <a href="http://soft.vpser.net/lnmp/lnmp1.6.tar.gz">http://soft.vpser.net/lnmp/lnmp1.6.tar.gz</a> -cO lnmp1.6.tar.gz &amp;&amp; tar zxf lnmp1.6.tar.gz &amp;&amp; cd lnmp1.6 &amp;&amp; LNMP_Auto=&quot;y&quot; DBSelect=&quot;3&quot; DB_Root_Password=&quot;<a href="http://lnmp.org">lnmp.org</a>&quot; InstallInnodb=&quot;y&quot; PHPSelect=&quot;8&quot; SelectMalloc=&quot;1&quot; ./install.sh lnmp
+<a href="http://xn--lnmp-9m9gl7luskq7dh1bo35g1e7bqf9b.org">默认数据库密码是lnmp.org</a> 大家可以先修改
+一切都是自动的，大概要2个小时，安装好后，打开NI的ip
+在首页可以看到 查看本地环境: 探针 phpinfo phpMyAdmin
+再参考
+LNMP添加、删除虚拟主机及伪静态使用教程
+<a href="https://lnmp.org/faq/lnmp-vhost-add-howto.html">https://lnmp.org/faq/lnmp-vhost-add-howto.html</a>
+安装好后，先停止 nginx
+lnmp nginx stop
+移动wwwroot文件夹到数据盘比如我的数据盘目录是/sharedfolders/2t/www
+mv /home/wwwroot /sharedfolders/2t/www
+将数据盘的wwwroot印射回/home/wwwroot
+ln -s /sharedfolders/2t/www/wwwroot /home/wwwroot
+这样网站的数据就不占N1的空间了，都是在外接的数据盘上面了（必须ext4格式）
+添加域名后/home/wwwroot/目录回有一个域名的目录，在里面上传php程序安装，（比如我的这个博客typecho）</p>
+<p>下面是lnmp相关的命令
+添加主机</p>
+<p>lnmp vhost add
+修改添加的主机的端口
+/usr/local/nginx/conf/vhost</p>
+<p>重启lnmp start|stop|restart 启动停止重新启动</p>
+<p>lnmp restart
+lnmp nginx restart</p>
+<p>列出网站(虚拟主机)
+执行：lnmp vhost list</p>
+<p>删除网站(虚拟主机)
+执行：lnmp vhost del</p></article></section><footer>Powered by <a href="https://github.com/xcatliu/pagic" target="_blank">Pagic</a></footer><script src="https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js"></script><script src="https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js"></script><script type="module" src="/index.js"></script></body></html>

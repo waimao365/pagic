@@ -1,0 +1,49 @@
+<!doctype html><html class="" data-reactroot=""><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous"/>
+<meta data-react-helmet="true" charset="utf-8"/><meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"/><meta data-react-helmet="true" name="description" content="Use this template to create a Pagic site with the blog theme."/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1"/>
+<title data-react-helmet="true">hexo博客备份迁移教程 · pagic template</title>
+<link data-react-helmet="true" rel="stylesheet" href="/assets/index.css"/><link data-react-helmet="true" id="prismTheme" rel="stylesheet" href="/assets/prism.css"/>
+<script data-react-helmet="true" >
+    const shouldSetIsDark = document.cookie.includes('is_dark=1') ? true : document.cookie.includes('is_dark=0') ? false : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (shouldSetIsDark) {
+      document.documentElement.classList.add('is_dark');
+      document.getElementById('prismTheme').href = "/assets/prism_tomorrow.css";
+    }
+  </script>
+</head><body><a class="czs-menu-l show_on_mobile aside_button_open" href="#" style="background-image:url(&quot;/assets/czs-menu-l.svg&quot;)"></a><a class="show_on_mobile aside_button_text" href="/">pagic template</a><aside class="hide_on_mobile"><div class="aside_card"><a class="czs-menu-l show_on_mobile aside_button_close" href="#" style="background-image:url(&quot;/assets/czs-close-l.svg&quot;)"></a><h1><a href="/">pagic template</a></h1><p class="description">Use this template to create a Pagic site with the blog theme.</p><ul class="social list_style_none"><li class="flex_center"><a class="czs-github-logo" href="https://github.com/waimao8/pagic_template" target="_blank" style="background-image:url(&quot;/assets/czs-github-logo.svg&quot;)"></a></li><li class="flex_center"><a class="czs-message-l" href="mailto:huqi@gpdi.com" target="_blank" style="background-image:url(&quot;/assets/czs-message-l.svg&quot;)"></a></li><li class="flex_center"><a class="czs-twitter" href="https://twitter.com/huqii" target="_blank" style="background-image:url(&quot;/assets/czs-twitter.svg&quot;)"></a></li><li class="flex_center"><a class="czs-v2ex" href="https://v2ex.com/member/huqi" target="_blank" style="background-image:url(&quot;/assets/czs-v2ex.svg&quot;)"></a></li><li class="flex_center"><a class="czs-zhihu" href="https://www.zhihu.com/people/fashaoge" target="_blank" style="background-image:url(&quot;/assets/czs-zhihu.svg&quot;)"></a></li><li style="flex-grow:1"></li><li class="toggle_dark flex_center"><span class="czs-sun" style="background-image:url(&quot;/assets/czs-sun.svg&quot;)"></span><span class="czs-sun-l" style="background-image:url(&quot;/assets/czs-sun-l.svg&quot;)"></span><span class="czs-moon" style="background-image:url(&quot;/assets/czs-moon.svg&quot;)"></span><span class="czs-moon-l" style="background-image:url(&quot;/assets/czs-moon-l.svg&quot;)"></span></li></ul><nav><ul class="menu list_style_none"><li><a class="flex_center" href="/index.html"><span class="czs-home-l" style="background-image:url(&quot;/assets/czs-home-l.svg&quot;)"></span>Homepage</a></li><li><a class="flex_center" href="/categories/index.html"><span class="czs-category-l" style="background-image:url(&quot;/assets/czs-category-l.svg&quot;)"></span>Categories</a></li><li><a class="flex_center" href="/tags/index.html"><span class="czs-tag-l" style="background-image:url(&quot;/assets/czs-tag-l.svg&quot;)"></span>Tags</a></li><li><a class="flex_center" href="/about/index.html"><span class="czs-about-l" style="background-image:url(&quot;/assets/czs-about-l.svg&quot;)"></span>About</a></li><li><a class="flex_center" href="/archives/index.html"><span class="czs-box-l" style="background-image:url(&quot;/assets/czs-box-l.svg&quot;)"></span>Archives</a></li><li><a class="flex_center" href="/links/index.html"><span class="czs-link-l" style="background-image:url(&quot;/assets/czs-link-l.svg&quot;)"></span>Friends</a></li></ul></nav></div></aside><section class="main"><h1>hexo备份</h1><div class="main_post_meta"><time dateTime="Wed Sep 11 2019 21:01:13 GMT+0800 (CST)">2019-09-12</time> · <!-- -->unknown</div><article><h2 id="%E6%96%B0%E5%BB%BArepository">新建repository<a class="anchor" href="#%E6%96%B0%E5%BB%BArepository">§</a></h2>
+<p>在Github下创建一个新的repository，取名为myblog。(与本地的Hexo源码文件夹同名即可)
+创建的时候最好为空，<a href="http://xn--README-vp7iy0zm4bv27ct01hknqa.md">不要勾选创建README.md</a>。</p>
+<!-- more -->
+<h2 id="%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93">创建仓库<a class="anchor" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93">§</a></h2>
+<p>进入本地的Hexo文件夹(D:\hexo\blog\myblog)，在这个地方使用git Bash here执行以下命令创建仓库</p>
+<h2 id="%E5%88%9B%E5%BB%BAgitignore%E6%96%87%E4%BB%B6">创建.gitignore文件<a class="anchor" href="#%E5%88%9B%E5%BB%BAgitignore%E6%96%87%E4%BB%B6">§</a></h2>
+<pre class="language-autoit"><code class="language-autoit">touch <span class="token punctuation">.</span>gitignore
+</code></pre>
+<p>参考我的 .gitignore：（下面的文件不备份）
+.DS_Store
+Thumbs.db
+db.json
+<em>.log
+node_modules/
+public/
+.deploy</em>/</p>
+<h2 id="%E6%8F%90%E4%BA%A4hexo%E6%BA%90%E7%A0%81">提交Hexo源码<a class="anchor" href="#%E6%8F%90%E4%BA%A4hexo%E6%BA%90%E7%A0%81">§</a></h2>
+<p>git add .
+git commit -m &quot;添加hexo源码文件作为备份&quot;</p>
+<h2 id="%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%BA%93">删除远程库<a class="anchor" href="#%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%BA%93">§</a></h2>
+<p>git remote rm origin</p>
+<h2 id="%E6%B7%BB%E5%8A%A0%E8%BF%9C%E7%A8%8B-git-%E4%BB%93%E5%BA%93">添加远程 Git 仓库<a class="anchor" href="#%E6%B7%BB%E5%8A%A0%E8%BF%9C%E7%A8%8B-git-%E4%BB%93%E5%BA%93">§</a></h2>
+<p>git remote add origin <a href="mailto:git@github.com">git@github.com</a>:waimao8/myblog.git</p>
+<h2 id="%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%90%88%E5%B9%B6%E5%88%B0%E6%9C%AC%E5%9C%B0">远程仓库合并到本地<a class="anchor" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%90%88%E5%B9%B6%E5%88%B0%E6%9C%AC%E5%9C%B0">§</a></h2>
+<p>git pull --rebase origin master</p>
+<h2 id="%E6%9B%B4%E6%96%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93">更新远程仓库<a class="anchor" href="#%E6%9B%B4%E6%96%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93">§</a></h2>
+<p>git push -u origin master</p>
+<h1>hexo备份还原</h1>
+<p>在任何一台电脑上，只需要git remote add origin <a href="mailto:git@github.com">git@github.com</a>:waimao8/myblog.git,即可完成将Hexo源文件复制到本地</p>
+<p>在本地编写完博客时，顺次执行实现三步骤，即可完成Hexo博客源文件更新同步</p>
+<h2 id="%E6%8F%90%E4%BA%A4hexo%E6%BA%90%E7%A0%81-1">提交Hexo源码<a class="anchor" href="#%E6%8F%90%E4%BA%A4hexo%E6%BA%90%E7%A0%81-1">§</a></h2>
+<p>git add .
+git commit -m &quot;添加hexo源码文件作为备份&quot;</p>
+<h2 id="%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%90%88%E5%B9%B6%E5%88%B0%E6%9C%AC%E5%9C%B0-1">远程仓库合并到本地<a class="anchor" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%90%88%E5%B9%B6%E5%88%B0%E6%9C%AC%E5%9C%B0-1">§</a></h2>
+<p>git pull --rebase origin master</p>
+<h2 id="%E6%9B%B4%E6%96%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93-1">更新远程仓库<a class="anchor" href="#%E6%9B%B4%E6%96%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93-1">§</a></h2>
+<p>git push -u origin master</p></article></section><footer>Powered by <a href="https://github.com/xcatliu/pagic" target="_blank">Pagic</a></footer><script src="https://cdn.pagic.org/react@16.13.1/umd/react.production.min.js"></script><script src="https://cdn.pagic.org/react-dom@16.13.1/umd/react-dom.production.min.js"></script><script type="module" src="/index.js"></script></body></html>
