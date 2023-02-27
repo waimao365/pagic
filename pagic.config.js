@@ -9,10 +9,10 @@ export default {
         root: '/posts/',
         social: {
             github: 'waimao8/pagic_template',
-            email: 'huqi@gpdi.com',
-            twitter: 'huqii',
-            v2ex: 'huqi',
-            zhihu: 'fashaoge'
+            email: '****@****.com',
+            twitter: '****',
+            v2ex: '****',
+            zhihu: '****'
         }
     },
     nav: [
